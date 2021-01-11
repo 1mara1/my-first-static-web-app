@@ -1,0 +1,67 @@
+
+<?php 
+	
+?>
+
+<!DOCTYPE html>
+
+<head>
+	<title>Mr &amp; Mrs L DS</title>
+  <meta charset="utf-8">
+
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body id="myPage">
+ 
+  <form method="post" action="php/contacts_form.php">
+ 
+ 
+ </form>
+ 
+ 
+ 
+		<label for="name">Name:</label>
+        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+     </br>
+      
+		<label for="email">Email:</label>
+        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+    </br>
+		
+		<label for="phone">Contact number:</label>
+        <input class="form-control" id="phone" name="phone" placeholder="Best contact number" type="text" required>
+     </br>
+		
+		<label for="suburb">Suburb:</label>
+		<input class="form-control" id="suburb" name="suburb" placeholder="Location where we to meet you" type="text" required>
+   </br>
+		<input type="checkbox" class="form-check-input" id="automatic">
+		<label class="form-check-label" for="automatic">Automatic Car Lessons</label>
+
+	   </br>
+		<input type="checkbox" class="form-check-input" id="manual">
+		<label class="form-check-label" for="manual">Manual Car Lessons</label>
+	</br>
+	
+	  
+		<input type="checkbox" class="form-check-input" id="package">
+		<label class="form-check-label" for="package">Package Lessons</label>
+		</br>
+		<input type="checkbox" class="form-check-input" id="keys-two-drive">
+		<label class="form-check-label" for="keys-two-drive">Keys 2 Drive L</label>
+		</br>
+	  
+	
+           <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+ <div class="g-recaptcha" data-sitekey="6LfEgEYUAAAAAKaaabCJLJokUwYe5JDRsrkiai_-"></div>
+          <button class="btn btn-default pull-right" type="submit" value="submit">Submit</button>
+     
+	  </form>
+ 
+
+
+
+
+</body>
+</html>

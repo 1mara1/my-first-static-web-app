@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id='showCD'></div>
+
+<script>
+
+try //Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  xmlDoc.async="false";
+  
+  displayCD(0);
+  }
+catch(e)
+  {
+  try //Firefox, Mozilla, Opera, etc.
+    {
+    parser=new DOMParser();
+	document.write("xmlDoc is loaded, ready for use");
+	displayCD(0);
+
+    }
+  catch(e) {alert(e.message)}
+  }
+  
+  
+  displayCD(1);
+  
+  
+
+
+
+
+
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this, i);
+        }
+    };
+    xmlhttp.open("GET", "locations.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("location");
+    document.getElementById("showCD").innerHTML =
+    "Suburb: " +
+    x[i].getElementsByTagName("suburb")[0].childNodes[0].nodeValue +
+    "<br>Postcode: " +
+    x[i].getElementsByTagName("postcode")[0].childNodes[0].nodeValue;
+}
+
+
+  document.getElementById("showCD").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+
